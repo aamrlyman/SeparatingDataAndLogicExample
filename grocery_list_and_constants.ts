@@ -23,10 +23,10 @@ export enum TotalType {
 }
 
 export const unitIndexes = {
-  lbs: 0,
-  kg: 1,
-  g: 2,
-  oz: 3,
+  LBS: 0,
+  KG: 1,
+  G: 2,
+  OZ: 3,
 };
 
 export enum ItemType {
