@@ -1,7 +1,6 @@
 # SeparatingDataAndLogicExample
 A case study in the value of separating data structures from logic
 
-## Intro
 ### Story: 
 
 Reach becomes really popular with restaurants so there is a high demand for grocery list reporting 
@@ -21,9 +20,9 @@ _Separated logic data universe_:
 Sees that the filter function needs to be more generalized
 Creates a get totals function 
 See there will be more changes coming
-Writes unit tests and catches a bugs
- - $ calculation 
-Total items 
+Writes unit tests and catches bugs with
+ - Total cost calculation 
+ - Total item calculation 
 
 #### New Feature (Phase 3): Add cost per itemType
 
@@ -48,7 +47,6 @@ _Separated logic data universe_:
 Two new functions that use existing logic 14 lines
 Adds a few more unit tests to make sure things are working
 
-Phase 5
 #### New Feature (Phase 5): Add the option to return total weight in lbs, oz, g or kg
 
 _Traditional Universe_:
@@ -64,13 +62,6 @@ Adds some unit tests
 Other times we will want the flexibility to add new behaviors, and so in that part of the system we prefer data types and procedures."
 
 Is procedural code the answer?
-- Am I working with a single concept that can be well represented in a data structure? 
+- Am I working with a single concept that can be well represented in a data structure? If yes, then procedural code will lead to code that is easier to augment, test, and maintain. 
 
-
-
-"In any given system we will sometimes want the flexibility to add new data types, and so we prefer objects for that part of the system. 
-Other times we will want the flexibility to add new behaviors, and so in that part of the system we prefer data types and procedures."
-
-Is procedural code the answer?
-- Am I working with a single concept that can be well represented in a data structure? 
 
