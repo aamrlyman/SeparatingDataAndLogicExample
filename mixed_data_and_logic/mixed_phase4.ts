@@ -10,7 +10,7 @@ import {
   groceryList,
   GroceryItem,
   ItemType,
-} from "./grocery_list";
+} from "../grocery_list_and_constants";
 
 // add meat and produce total weights, add average cost per item type
 

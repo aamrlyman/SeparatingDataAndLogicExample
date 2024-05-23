@@ -11,7 +11,7 @@ import {
   GroceryItem,
   ItemType,
   unitIndexes,
-} from "./grocery_list";
+} from "../grocery_list_and_constants";
 
 // add the option to return total weight in lbs, oz, or kg
 

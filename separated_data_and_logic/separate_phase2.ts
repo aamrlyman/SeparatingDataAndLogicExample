@@ -35,8 +35,55 @@ function filterGroceryList(filterType: filterType, groceryList: GroceryItem[]) {
 }
 
 function getTotalQuantity(groceryList: GroceryItem[]) {
-  return groceryList.reduce((acc, item) => acc + item.quantity, 0);
+  return groceryList.reduce((acc, item) => {
+    if (item.billingType === BillingType.LBS) {
+      return (acc += 1);
+    } else {
+      return acc + item.quantity;
+    }
+  }, 0);
 }
 function getTotalCost(groceryList: GroceryItem[]) {
   return groceryList.reduce((acc, item) => acc + item.price * item.quantity, 0);
 }
+
+// unit test list
+const groceryList1: GroceryItem[] = [
+  {
+    name: "apple",
+    type: ItemType.PRODUCE,
+    price: 2.5,
+    quantity: 2,
+    billingType: BillingType.LBS,
+  },
+  {
+    name: "banana",
+    type: ItemType.PRODUCE,
+    price: 0.75,
+    quantity: 3,
+    billingType: BillingType.LBS,
+  },
+  {
+    name: "chicken",
+    type: ItemType.MEAT,
+    price: 5,
+    quantity: 1,
+    billingType: BillingType.EACH,
+  },
+  {
+    name: "milk",
+    type: ItemType.DAIRY,
+    price: 3,
+    quantity: 2,
+    billingType: BillingType.EACH,
+  },
+];
+
+// unit tests
+expect(getListTotals(groceryList1, TotalType.COST)).toBe(18.25);
+expect(getListTotals(groceryList1, TotalType.QUANTITY)).toBe(4);
+expect(getListTotals(groceryList1, TotalType.EACH)).toBe(3);
+expect(getListTotals(groceryList1, TotalType.WEIGHT)).toBe(5);
+expect(
+  filterGroceryList(ItemType.PRODUCE, groceryList1).map((item) => item.name)
+).toEqual(["apple", "banana"]);
