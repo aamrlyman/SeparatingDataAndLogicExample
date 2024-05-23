@@ -51,7 +51,8 @@ Result: 74 lines of managble code that continue to be easy to update and scale a
 ### Conclusion
 
 "In any given system we will sometimes want the flexibility to add new data types, and so we prefer objects for that part of the system. 
-Other times we will want the flexibility to add new behaviors, and so in that part of the system we prefer data types and procedures."
+Other times we will want the flexibility to add new behaviors, and so in that part of the system we prefer data types and procedures." 
+- Robert Martin Clean Code
 
 Is procedural code the answer?
 - Am I working with a single concept that can be well represented in a data structure? If yes, then procedural code will lead to code that is easier to augment, test, and maintain. 
